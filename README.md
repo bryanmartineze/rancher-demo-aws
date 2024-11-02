@@ -87,7 +87,7 @@ Ahora tienes Rancher Manager implementado con éxito en nuestro clúster RKE2 Ku
 Si ya has explorado suficiente y deseas dejar de practicar en tu Rancher Manager Server, ejecutaremos los siguientes comandos en nuestra instancia o VM de desarrollo con Terraform Instalado.
 
 ```bash
-# Desplegar Rancher en 10 minutos
+# Destruir ambiente
 terraform destroy -auto-approve
 ```
 

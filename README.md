@@ -44,7 +44,7 @@ En esta guía de despliegue, instalaremos SUSE Rancher, que incluye los siguient
 
 Si prefieres seguir esta guía con un increíble video... por favor, haz clic a continuación! (Pronto)
 
-[![rancher-demo-aws]](images/rancher-demo-aws.png)
+[![rancher-demo-aws](images/rancher-demo-aws.png)]
 
 # Preparando las credenciales de AWS
 
@@ -78,7 +78,7 @@ Cuando ejecutamos el script de Terraform, en justamente 10 minutos, podremos vis
 
 Ahora debería visualizar Rancher Manager solicitando una contraseña que configuramos durante la instalación. Para mi implementación utilicé `rancherSecurePassword`. También deberás verificar la URL de Rancher Manager y aceptar los Términos y condiciones. Una vez completado... Debería verse así:
 
-![rancher-rancher-manager-home](images/rancher-rancher-manager-home.png)
+![rancher-rancher-manager-home](images/rancher-rancher-manager-bootstrap.png)
 
 Ahora tienes Rancher Manager implementado con éxito en un clúster RKE2 Kubernetes!!! Recuerda que hay muchas formas de configurarlo y esta fue solo una instalación mínima y sencilla. Siéntete libre de explorar todo lo que puedes hacer dentro de Rancher Manager, en este caso podemos pasaremos al siguiente paso de instalar Rancher Longhorn.
 
@@ -90,7 +90,6 @@ Si ya has explorado suficiente y deseas dejar de practicar en tu Rancher Manager
 # Destruir ambiente
 terraform destroy -auto-approve
 ```
-![rancher-rancher-manager-home](images/rancher-rancher-manager-home.png)
 
 ## Conclusión
 

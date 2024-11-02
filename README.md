@@ -21,7 +21,7 @@ Un poco de mi historia...
 - Solution Architect para SUSE Mexico
 - He trabajado en el area de preventa por más de 8 años
 - Conocimiento en el area de on-premise, nube y ahora nube nativa
-- Gamer de nacimiento, me encanta jugar muchos juegos de los 90s!
+- Aunque no nací en esa época, me encanta la música de los 80s!
 
 ## Introducción
 

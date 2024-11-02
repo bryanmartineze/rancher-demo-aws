@@ -1,6 +1,6 @@
 # Rancher en 10 minutos
 
-# Fácil instalación de RKE2, Rancher Manager, Longhorn y Neuvector
+# Fácil instalación de RKE2 y Rancher Manager
 
 ### Tabla de contenidos
 

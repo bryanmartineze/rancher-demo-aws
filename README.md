@@ -37,14 +37,15 @@ En esta guía de despliegue, instalaremos SUSE Rancher, que incluye los siguient
 
 1. Cuenta de AWS
 2. Crear una credencial Access Key con facultades de Administrador
-3. Instancia de EC2, o VM de Linux con Terraform instalado
-4. Este repositorio clonado
+3. Instancia de EC2, o VM de Linux con Terraform instalado (VM de Desarrollo)
+4. Llave SSH .pem de AWS creada y cargada en nuestra VM de Desarrollo
+5. Este repositorio clonado
 
 ## Observa el video
 
 Si prefieres seguir esta guía con un increíble video... por favor, haz clic a continuación! (Pronto)
 
-[![rancher-demo-aws](images/rancher-demo-aws.png)]
+![rancher-demo-aws](images/rancher-demo-aws.png)
 
 # Preparando las credenciales de AWS
 
@@ -58,6 +59,21 @@ export AWS_SESSION_TOKEN=tu-session-token # Solamente si usas credenciales tempo
 ```
 
 ## Aprovisionamiento con Terraform
+
+Antes de aprovisionar con Terraform, es necesario tener nuestra llave SSH cargada en algún ruta de directorio de nuestra VM de desarrollo, y modificar el código de acuerdo a esta ruta:
+
+```bash
+# Install RKE2, Cert-Manager, and Rancher on the instance
+resource "null_resource" "install_rancher" {
+  depends_on = [aws_eip_association.eip_assoc]  # Ensure EIP is attached
+
+  connection {
+    type        = "ssh"
+    host        = aws_eip.rancher_eip.public_dns
+    user        = "ec2-user"
+    private_key = file("/home/ec2-user/rancher-demo-aws/linux.pem") #Configura aqui la ruta de tu llave SSH!
+  }
+```
 
 Para este despliegue, utilizaremos un servidor SLES 15 SP5 virtualizado aprovisionado por AWS y Terraform. Cualquier distribución de Linux debería funcionar perfectamente, siempre que haya conectividad de red. Aquí tienes una lista de nuestros [Sistemas Operativos soportados](https://docs.rke2.io/install/requirements#operating-systems). 
 

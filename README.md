@@ -96,7 +96,7 @@ Ahora debería visualizar Rancher Manager solicitando una contraseña que config
 
 ![rancher-rancher-manager-home](images/rancher-rancher-manager-bootstrap.png)
 
-Ahora tienes Rancher Manager implementado con éxito en un clúster RKE2 Kubernetes!!! Recuerda que hay muchas formas de configurarlo y esta fue solo una instalación mínima y sencilla. Siéntete libre de explorar todo lo que puedes hacer dentro de Rancher Manager, en este caso podemos pasaremos al siguiente paso de instalar Rancher Longhorn.
+Ahora tienes Rancher Manager implementado con éxito en un clúster RKE2 Kubernetes!!! Recuerda que hay muchas formas de configurarlo y esta fue solo una instalación mínima y sencilla. Siéntete libre de explorar todo lo que puedes hacer dentro de Rancher Manager.
 
 ## Destrucción del ambiente
 

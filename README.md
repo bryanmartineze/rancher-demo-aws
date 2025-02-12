@@ -61,6 +61,29 @@ export AWS_SESSION_TOKEN=tu-session-token # Solamente si usas credenciales tempo
 ## Aprovisionamiento con Terraform
 
 Antes de aprovisionar con Terraform, es necesario tener nuestra llave SSH cargada en algún ruta de directorio de nuestra VM de desarrollo, y modificar el código de 1vm.tf de acuerdo a esta ruta:
+```bash
+# Create a single instance
+resource "aws_instance" "rancher_instance" {
+  ami                    = data.aws_ami.suse-sles-15-sp5.id
+  instance_type          = "t3a.xlarge"
+  subnet_id              = data.aws_subnet.default.id
+  key_name               = "linux" #Configura aqui la llave SSH
+  vpc_security_group_ids = [aws_security_group.rancher_sg.id]
+
+  root_block_device {
+    delete_on_termination = true
+    volume_size           = 30
+    volume_type           = "gp3"
+  }
+
+    tags = {
+    Name = "rancher-server"
+  }
+
+}
+
+```
+y en:
 
 ```bash
 # Install RKE2, Cert-Manager, and Rancher on the instance

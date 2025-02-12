@@ -60,7 +60,7 @@ export AWS_SESSION_TOKEN=tu-session-token # Solamente si usas credenciales tempo
 
 ## Aprovisionamiento con Terraform
 
-Antes de aprovisionar con Terraform, es necesario tener nuestra llave SSH cargada en algún ruta de directorio de nuestra VM de desarrollo, y modificar el código de acuerdo a esta ruta:
+Antes de aprovisionar con Terraform, es necesario tener nuestra llave SSH cargada en algún ruta de directorio de nuestra VM de desarrollo, y modificar el código de 1vm.tf de acuerdo a esta ruta:
 
 ```bash
 # Install RKE2, Cert-Manager, and Rancher on the instance
@@ -82,8 +82,8 @@ Ejecutaremos los siguientes comandos en nuestra instancia o VM de linux con Terr
 ```bash
 # Desplegar Rancher en 10 minutos
 terraform init
-terrafom plan
-terraform apply auto-approve
+terraform plan
+terraform apply -auto-approve
 ```
 
 ## Rancher Multi Cluster Manager

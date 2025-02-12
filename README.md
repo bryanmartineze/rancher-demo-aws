@@ -61,9 +61,11 @@ export AWS_SESSION_TOKEN=tu-session-token # Solamente si usas credenciales tempo
 ## Aprovisionamiento con Terraform
 
 Asegurate de utilizar la region de tu preferencia en el código de main.tf:
+```bash
 provider "aws" {
   region = "us-east-1" # Cambialo a tu region de preferencia!
 }
+```
 
 Antes de aprovisionar con Terraform, es necesario tener nuestra llave SSH cargada en algún ruta de directorio de nuestra VM de desarrollo, y modificar el código de 1vm.tf de acuerdo a esta ruta:
 ```bash
